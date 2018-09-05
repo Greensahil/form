@@ -10,9 +10,9 @@
            var element = document.getElementById('element-to-print');
            html2pdf().from(element).outputPdf().then(function(pdf) {
     //This logs the right base64
-            const newpdf = btoa(pdf);
+            // const newpdf = btoa(pdf);
             // var newpdf = pdf.toString('base64');
-            $.post('./setup', newpdf, function(result) {
+            $.post('./setup', btoa(pdf), function(result) {
                 console.log('result', result);
             }); 
         }); 

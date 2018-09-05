@@ -34,6 +34,12 @@ var SignaturePad = (function(document) {
         this.onBegin = opts.onBegin;
 
         this._canvas = canvas;
+        canvas.width = canvas.scrollWidth;
+        canvas.height = canvas.scrollHeight;
+        window.addEventListener('resize', function() {
+          canvas.width = canvas.scrollWidth;
+          canvas.height = canvas.scrollHeight;
+        });
         this._ctx = canvas.getContext("2d");
         this._ctx.lineCap = 'round';
         this.clear();

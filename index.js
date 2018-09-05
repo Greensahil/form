@@ -38,10 +38,12 @@ app.post('/setup', function(req, res, next) {
     console.log('setup: data', req.body.newpdf);
     console.log('setup: check', req.body.check);
     console.log('setup avatar: ', req.body.avatar);
-    console.log(req.body)
+    // console.log(req.body)
     var encodedpdf=(req.body)
+    // console.log(encodedpdf.toString('utf8'));
     // console.log(encodedpdf)
-
+    // const content = Buffer.from(encodedpdf, 'base64');
+    console.log(encodedpdf)
     
     // var decodedFile = new Buffer(, 'base64');
     // var decodedFile = new Buffer(req.body, 'base64');
