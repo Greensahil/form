@@ -39,11 +39,13 @@ app.post('/setup', function(req, res, next) {
     console.log('setup: check', req.body.check);
     console.log('setup avatar: ', req.body.avatar);
     // console.log(req.body)
-    var encodedpdf=(req.body)
-    // console.log(encodedpdf.toString('utf8'));
-    // console.log(encodedpdf)
-    // const content = Buffer.from(encodedpdf, 'base64');
+    var encodedpdf=(req.body.newpdf)
     console.log(encodedpdf)
+    console.log(Object.prototype.toString.call(encodedpdf));
+    // const content = Buffer.from(encodedpdf, 'base64');
+    // console.log(content);
+    // console.log(typeof encodedpdf)
+
     
     // var decodedFile = new Buffer(, 'base64');
     // var decodedFile = new Buffer(req.body, 'base64');
@@ -68,8 +70,8 @@ app.post('/setup', function(req, res, next) {
         port: 2525,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'postmaster@sandboxf529d3b652af4e17af40b68535fd6fd8.mailgun.org', // generated ethereal user
-            pass: '271a1a9fd239a98a522ddcce25d7702e-c1fe131e-df10d604' // generated ethereal password
+            user: 'postmaster@sandboxb26a57d004d4476aaec54fbf96943fca.mailgun.org', // generated ethereal user
+            pass: 'a2e95fcd9ecef1c8f784ce0d3ab50918-f45b080f-b69d262d' // generated ethereal password
         },
         tls:{
             rejectUnauthorized:false
@@ -85,25 +87,24 @@ app.post('/setup', function(req, res, next) {
         html: output, // html body
         attachments: [{
             filename: 'transportpdf.pdf',
-            content: JSON.stringify(encodedpdf),
-            "contentType":"application/pdf",
+            content: encodedpdf,
             encoding: 'base64'
           }]
 
     };
 
     // send mail with defined transport object
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('Message sent: %s', info.messageId);
-        // Preview only available when sending through an Ethereal account
-        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+    // transporter.sendMail(mailOptions, (error, info) => {
+    //     if (error) {
+    //         return console.log(error);
+    //     }
+    //     console.log('Message sent: %s', info.messageId);
+    //     // Preview only available when sending through an Ethereal account
+    //     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
         
-        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-    });
+    //     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+    //     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+    // });
     // req.flash("success","Message has been sent")
 
     // res.render('index',{success:req.flash("success")})
