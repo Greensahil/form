@@ -167,3 +167,16 @@ th{
     border: 1px solid #ced4da;
     border-radius: .25rem;
 }
+
+/* Hide and show features */
+.btn-primary{
+  background-color:#495057;
+  border-color:#495057
+}
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}

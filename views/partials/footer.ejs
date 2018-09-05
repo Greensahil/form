@@ -2,27 +2,29 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="/scripts.js"></script>
     <script src="/html2pdf.js"></script>
+    <script src="/dateprefixer.js"></script>
    <script>
         
     
 
         function myFunction(){
            var element = document.getElementById('element-to-print');
-           html2pdf().from(element).toPdf().get('pdf').then(function (pdf) {
-                const newpdf = btoa(pdf);
-            // var newpdf = pdf.toString('base64');
-            $.ajax({
-						type: 'POST',
-						data: newpdf,
-				        contentType: 'application/octet-stream',
-                        async : false,
-                        url: 'http://localhost:3000/setup',						
-                        success: function(data) {
-                            console.log('success');
-                            console.log(JSON.stringify(data));
-                        }
-                    });
-                });
+           html2pdf(element);
+        //    html2pdf().from(element).toPdf().get('pdf').then(function (pdf) {
+        //         const newpdf = btoa(pdf);
+        //     // var newpdf = pdf.toString('base64');
+        //     $.ajax({
+		// 				type: 'POST',
+		// 				data: newpdf,
+		// 		        contentType: 'application/octet-stream',
+        //                 async : false,
+        //                 url: 'http://localhost:3000/setup',						
+        //                 success: function(data) {
+        //                     console.log('success');
+        //                     console.log(JSON.stringify(data));
+        //                 }
+        //             });
+        //         });
 
 
 
@@ -36,6 +38,7 @@
     //         }); 
     //     }); 
 }
-    </script>
+</script>
+
 </body>
 </html>
