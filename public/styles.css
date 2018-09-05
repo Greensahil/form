@@ -156,7 +156,9 @@ th{
     line-height: 1.5;
     color: #495057;
     text-align: center;
-    white-space: nowrap;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
     background-color: #e9ecef;
     border: 1px solid #ced4da;
     border-radius: .25rem;
