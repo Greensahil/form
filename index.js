@@ -4,8 +4,10 @@ const bodyParser=require('body-parser');
 const nodemailer=require('nodemailer')
 const flash   = require('connect-flash');
 const fileUpload = require('express-fileupload');
-var session = require('express-session');
+const session = require('express-session');
 
+//Nodemailer keys are stored in here
+const keys=require('./config/keys');
 
 app.use(express.static(__dirname+ "/public"));
 app.set('view engine','ejs');
@@ -129,8 +131,8 @@ app.get('/apple',function(req,res){
         port: 2525,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'postmaster@sandboxf529d3b652af4e17af40b68535fd6fd8.mailgun.org', // generated ethereal user
-            pass: '271a1a9fd239a98a522ddcce25d7702e-c1fe131e-df10d604' // generated ethereal password
+            user: keys.user, // generated ethereal user
+            pass: keys.pass // generated ethereal password
         },
         tls:{
             rejectUnauthorized:false
