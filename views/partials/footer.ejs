@@ -8,8 +8,17 @@
     
 
         function myFunction(){
+            $(':input').removeAttr('placeholder');
            var element = document.getElementById('element-to-print');
-           html2pdf(element);
+           var opt = {
+                filename:     'myfile.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+                };
+
+                // New Promise-based usage:
+                html2pdf().from(element).set(opt).save();
         //    html2pdf().from(element).toPdf().get('pdf').then(function (pdf) {
         //         const newpdf = btoa(pdf);
         //     // var newpdf = pdf.toString('base64');
