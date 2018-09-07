@@ -13,8 +13,15 @@ app.use(express.static(__dirname+ "/public"));
 app.set('view engine','ejs');
 
 
-app.use(bodyParser.json({limit: '1gb'}));
-app.use(bodyParser.urlencoded({limit: '1gb', extended: true, parameterLimit: 1000000}));
+app.use(bodyParser.urlencoded({
+    limit: '5mb',
+    parameterLimit: 100000,
+    extended: false
+}));
+
+app.use(bodyParser.json({
+    limit: '5mb'
+}));
 app.use(session({ cookie: { maxAge: 60000 }, 
     secret: 'sahil',
     resave: false, 
@@ -37,13 +44,16 @@ app.post("/send",function(req,res){
 //   res.send('File uploaded');
 // })
 app.post('/setup', function(req, res, next) {
-    console.log('setup: data', req.body.newpdf);
-    console.log('setup: check', req.body.check);
-    console.log('setup avatar: ', req.body.avatar);
+    // console.log('setup: data', req.body.newpdf);
+    // console.log('setup: check', req.body.check);
+    // console.log('setup avatar: ', req.body.avatar);
     // console.log(req.body)
-    var encodedpdf=(req.body.newpdf)
+    var encodedpdf=(req.body.payload)
     console.log(encodedpdf)
-    console.log(Object.prototype.toString.call(encodedpdf));
+    
+    console.log(typeof req.body)
+    console.log(typeof encodedpdf);
+    console.log(req.body)
     // const content = Buffer.from(encodedpdf, 'base64');
     // console.log(content);
     // console.log(typeof encodedpdf)
@@ -72,8 +82,8 @@ app.post('/setup', function(req, res, next) {
         port: 2525,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'postmaster@sandboxb26a57d004d4476aaec54fbf96943fca.mailgun.org', // generated ethereal user
-            pass: 'a2e95fcd9ecef1c8f784ce0d3ab50918-f45b080f-b69d262d' // generated ethereal password
+            user: keys.user, // generated ethereal user
+            pass: keys.pass // generated ethereal password
         },
         tls:{
             rejectUnauthorized:false

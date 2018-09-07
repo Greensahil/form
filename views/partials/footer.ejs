@@ -10,30 +10,25 @@
         function myFunction(){
             $(':input').removeAttr('placeholder');
            var element = document.getElementById('element-to-print');
-           var opt = {
-                filename:     'myfile.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2 },
-                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-                };
+        //    var opt = {
+        //         filename:     'myfile.pdf',
+        //         image:        { type: 'jpeg', quality: 0.98 },
+        //         html2canvas:  { scale: 2 },
+        //         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        //         };
 
                 // New Promise-based usage:
-                html2pdf().from(element).set(opt).save();
-        //    html2pdf().from(element).toPdf().get('pdf').then(function (pdf) {
-        //         const newpdf = btoa(pdf);
-        //     // var newpdf = pdf.toString('base64');
-        //     $.ajax({
-		// 				type: 'POST',
-		// 				data: newpdf,
-		// 		        contentType: 'application/octet-stream',
-        //                 async : false,
-        //                 url: 'http://localhost:3000/setup',						
-        //                 success: function(data) {
-        //                     console.log('success');
-        //                     console.log(JSON.stringify(data));
-        //                 }
-        //             });
-        //         });
+                // var doc = html2pdf(element, {return: true});
+                html2pdf().from(element).outputPdf().then(function(pdf) {
+    //This logs the right base64
+                newpdf=btoa(pdf);
+                
+                $.post('./setup', {payload: newpdf}, function(result) {
+                console.log('result', result);
+                console.log(typeof newpdf)
+});
+})
+                 
 
 
 
@@ -46,6 +41,7 @@
     //             console.log('wroking')
     //         }); 
     //     }); 
+                
 }
 </script>
 
