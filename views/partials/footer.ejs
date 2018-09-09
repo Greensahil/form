@@ -10,37 +10,22 @@
         function myFunction(){
             $(':input').removeAttr('placeholder');
            var element = document.getElementById('element-to-print');
-        //    var opt = {
-        //         filename:     'myfile.pdf',
-        //         image:        { type: 'jpeg', quality: 0.98 },
-        //         html2canvas:  { scale: 2 },
-        //         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-        //         };
+            var opt = {
+            margin:       0,
+            filename:     'myfile.pdf',
+            // image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { 'width': '3000'},
+            jsPDF: { unit: 'pt', format: 'a4', orientation: 'l' },
+            };
 
-                // New Promise-based usage:
-                // var doc = html2pdf(element, {return: true});
-                html2pdf().from(element).outputPdf().then(function(pdf) {
-    //This logs the right base64
-                newpdf=btoa(pdf);
-                
-                $.post('./setup', {payload: newpdf}, function(result) {
-                console.log('result', result);
-                console.log(typeof newpdf)
-});
-})
+            // New Promise-based usage:
+            html2pdf().from(element).set(opt).save();
+
+          
                  
 
 
 
-    //        html2pdf().from(element).outputPdf().then(function(pdf) {
-    // //This logs the right base64
-    //         const newpdf = btoa(pdf);
-    //         // var newpdf = pdf.toString('base64');
-    //         $.post('./setup', newpdf, function(result) {
-    //             console.log('result', result);
-    //             console.log('wroking')
-    //         }); 
-    //     }); 
                 
 }
 </script>

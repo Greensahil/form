@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box; }
   
-    /* html{
-      overflow-x: hidden
-    } */
+    html{
+      padding:3px
+    }
 
 .container-fluid{
     text-align:center;
@@ -199,3 +199,4 @@ th{
 [data-toggle="collapse"]:not(.collapsed) .if-collapsed {
   display: none;
 }
+
