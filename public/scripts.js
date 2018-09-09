@@ -487,6 +487,69 @@ var signaturePad6 = new SignaturePad(document.getElementById('signature-pad-6'),
     throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
     minPointDistance: 3,
 });
+var signaturePad7 = new SignaturePad(document.getElementById('signature-pad-7'), {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    penColor: 'rgb(0, 0, 0)',
+    velocityFilterWeight: .7,
+    minWidth: 0.5,
+    maxWidth: 2.5,
+    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
+    minPointDistance: 3,
+});
+var signaturePad8 = new SignaturePad(document.getElementById('signature-pad-8'), {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    penColor: 'rgb(0, 0, 0)',
+    velocityFilterWeight: .7,
+    minWidth: 0.5,
+    maxWidth: 2.5,
+    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
+    minPointDistance: 3,
+});
+var signaturePad9 = new SignaturePad(document.getElementById('signature-pad-9'), {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    penColor: 'rgb(0, 0, 0)',
+    velocityFilterWeight: .7,
+    minWidth: 0.5,
+    maxWidth: 2.5,
+    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
+    minPointDistance: 3,
+});
+var signaturePad10 = new SignaturePad(document.getElementById('signature-pad-10'), {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    penColor: 'rgb(0, 0, 0)',
+    velocityFilterWeight: .7,
+    minWidth: 0.5,
+    maxWidth: 2.5,
+    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
+    minPointDistance: 3,
+});
+var signaturePad11 = new SignaturePad(document.getElementById('signature-pad-11'), {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    penColor: 'rgb(0, 0, 0)',
+    velocityFilterWeight: .7,
+    minWidth: 0.5,
+    maxWidth: 2.5,
+    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
+    minPointDistance: 3,
+});
+var signaturePad12 = new SignaturePad(document.getElementById('signature-pad-12'), {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    penColor: 'rgb(0, 0, 0)',
+    velocityFilterWeight: .7,
+    minWidth: 0.5,
+    maxWidth: 2.5,
+    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
+    minPointDistance: 3,
+});
+var signaturePad13 = new SignaturePad(document.getElementById('signature-pad-13'), {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    penColor: 'rgb(0, 0, 0)',
+    velocityFilterWeight: .7,
+    minWidth: 0.5,
+    maxWidth: 2.5,
+    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
+    minPointDistance: 3,
+});
 var saveButton = document.getElementById('save'),
     clearButton = document.getElementById('clear'),
     clearButton2 = document.getElementById('clear-2')
@@ -494,6 +557,14 @@ var saveButton = document.getElementById('save'),
     clearButton4 = document.getElementById('clear-4')
     clearButton5 = document.getElementById('clear-5')
     clearButton6 = document.getElementById('clear-6')
+    clearButton7 = document.getElementById('clear-7')
+    clearButton8 = document.getElementById('clear-8')
+    clearButton9 = document.getElementById('clear-9')
+    clearButton10 = document.getElementById('clear-10')
+    clearButton11 = document.getElementById('clear-11')
+    clearButton12 = document.getElementById('clear-12')
+    clearButton13 = document.getElementById('clear-13')
+
     showPointsToggle = document.getElementById('showPointsToggle');
 
 clearButton.addEventListener('click', function(event) {
@@ -513,4 +584,25 @@ clearButton5.addEventListener('click', function(event) {
 });
 clearButton6.addEventListener('click', function(event) {
     signaturePad6.clear();
+});
+clearButton7.addEventListener('click', function(event) {
+    signaturePad7.clear();
+});
+clearButton8.addEventListener('click', function(event) {
+    signaturePad8.clear();
+});
+clearButton9.addEventListener('click', function(event) {
+    signaturePad9.clear();
+});
+clearButton10.addEventListener('click', function(event) {
+    signaturePad10.clear();
+});
+clearButton11.addEventListener('click', function(event) {
+    signaturePad11.clear();
+});
+clearButton12.addEventListener('click', function(event) {
+    signaturePad12.clear();
+});
+clearButton13.addEventListener('click', function(event) {
+    signaturePad13.clear();
 });
