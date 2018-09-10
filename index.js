@@ -49,11 +49,11 @@ app.post('/setup', function(req, res, next) {
     // console.log('setup avatar: ', req.body.avatar);
     // console.log(req.body)
     var encodedpdf=(req.body.payload)
-    console.log(encodedpdf)
+    // console.log(encodedpdf)
     
-    console.log(typeof req.body)
-    console.log(typeof encodedpdf);
-    console.log(req.body)
+    // console.log(typeof req.body)
+    // console.log(typeof encodedpdf);
+    // console.log(req.body)
     // const content = Buffer.from(encodedpdf, 'base64');
     // console.log(content);
     // console.log(typeof encodedpdf)
