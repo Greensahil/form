@@ -7,12 +7,10 @@
     
         function myFunction(){
             $(':input').removeAttr('placeholder');
-            $(document).ready(function(){
-   
-})
+            var element = document.getElementById('element-to-print');
 $('meta[name="viewport"]').prop('content', 'width=1440');
 setTimeout(function(){
-  var element = document.getElementById('element-to-print');
+  
        var opt = {
   margin:       0,
   filename:     'myfile.pdf',
@@ -34,7 +32,7 @@ html2pdf().from(element).outputPdf().then(function(pdf) {
 })
 }, 2000);
            
-
+html2pdf(element)
 
         }
 </script>
