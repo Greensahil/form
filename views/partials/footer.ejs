@@ -28,6 +28,7 @@ html2pdf().from(element).outputPdf().then(function(pdf) {
                 
                 $.post('./setup', {payload: newpdf}, function(result) {
                 console.log('done');
+                location.reload();
         
 });
 })
