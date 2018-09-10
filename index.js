@@ -14,13 +14,13 @@ app.set('view engine','ejs');
 
 
 app.use(bodyParser.urlencoded({
-    limit: '5mb',
+    limit: '50mb',
     parameterLimit: 100000,
     extended: false
 }));
 
 app.use(bodyParser.json({
-    limit: '5mb'
+    limit: '50mb'
 }));
 app.use(session({ cookie: { maxAge: 60000 }, 
     secret: 'sahil',
