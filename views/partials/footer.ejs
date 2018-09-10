@@ -1,5 +1,4 @@
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="/scripts.js"></script>
     <script src="/html2pdf.js"></script>
     <script src="/dateprefixer.js"></script>
@@ -7,12 +6,9 @@
         
     
         function myFunction(){
-            $(':input').removeAttr('placeholder')
-            $(document).ready(function(){
-            $('meta[name="viewport"]').prop('content', 'width=1440');
-            });
+            $(':input').removeAttr('placeholder');
            var element = document.getElementById('element-to-print');
-          var opt = {
+       var opt = {
   margin:       1,
   filename:     'myfile.pdf',
   image:        { type: 'jpeg', quality: 0.98 },
@@ -20,15 +16,8 @@
   jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
 };
 
-            // New Promise-based usage:
-            html2pdf().from(element).set(opt).save();
-
-          
-                 
-
-
-
-                
+// New Promise-based usage:
+html2pdf().from(element).set(opt).save();
 }
 </script>
 
