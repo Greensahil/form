@@ -7,17 +7,24 @@
     
         function myFunction(){
             $(':input').removeAttr('placeholder');
-           var element = document.getElementById('element-to-print');
+            $(document).ready(function(){
+   
+})
+$('meta[name="viewport"]').prop('content', 'width=1440');
+setTimeout(function(){
+  var element = document.getElementById('element-to-print');
        var opt = {
-  margin:       1,
+  margin:       0,
   filename:     'myfile.pdf',
   image:        { type: 'jpeg', quality: 0.98 },
-  html2canvas:  { scale: 2 },
+  html2canvas:  { scale:1 },
   jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
 };
 
 // New Promise-based usage:
 html2pdf().from(element).set(opt).save();
+}, 2000);
+           
 }
 </script>
 
