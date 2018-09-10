@@ -6,15 +6,17 @@
    <script>
         
     
-
         function myFunction(){
-            $(':input').removeAttr('placeholder');
+            $(':input').removeAttr('placeholder')
+            $(document).ready(function(){
+            $('meta[name="viewport"]').prop('content', 'width=1440');
+            });
            var element = document.getElementById('element-to-print');
             var opt = {
             margin:       0,
             filename:     'myfile.pdf',
-            // image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { 'width': '3000'},
+            image:        { type: 'jpeg', quality: 0.98 },
+            // html2canvas:  { 'width': '3000'},
             jsPDF: { unit: 'pt', format: 'a4', orientation: 'l' },
             };
 
