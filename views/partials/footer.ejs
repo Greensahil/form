@@ -2,9 +2,14 @@
     <script src="/scripts.js"></script>
     <script src="/html2pdf.js"></script>
     <script src="/dateprefixer.js"></script>
+    <script src="/loadingpage.js"></script>
    <script>
         
-    
+        function toggleDiv(id) {
+    var div = document.getElementById(id);
+    div.style.display = div.style.display == "none" ? "flex" : "none";
+}
+
         function myFunction(){
             $(':input').removeAttr('placeholder');
             var element = document.getElementById('element-to-print');
@@ -18,6 +23,7 @@ $('meta[name="viewport"]').prop('content', 'width=1440');
  unit: 'mm',
  format: 'a4', }
 };
+toggleDiv('loader')
 // setTimeout(function(){
   
      
@@ -37,6 +43,8 @@ $('meta[name="viewport"]').prop('content', 'width=1440');
 // }, 1000);
            
  html2pdf().from(element).set(opt).save();
+
+
 
         }
 </script>
