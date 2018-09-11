@@ -15,8 +15,8 @@ setTimeout(function(){
   margin:       0,
   filename:     'myfile.pdf',
   image:        { type: 'jpeg', quality: 0.98 },
-  html2canvas:  { scale:1 },
-  jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+  html2canvas:  { scale:1.5,dpi: 96, letterRendering: true},
+  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
 };
 
 // New Promise-based usage:
@@ -24,15 +24,16 @@ html2pdf().from(element).outputPdf().then(function(pdf) {
     //This logs the right base64
                 newpdf=btoa(pdf);
                 
-                $.post('./setup', {payload: newpdf}, function(result) {
-                console.log('done');
-                location.reload();
+//                 $.post('./setup', {payload: newpdf}, function(result) {
+//                 console.log('done');
+//                 location.reload();
+ html2pdf().from(element).set(opt).save();
         
-});
+// });
 })
-}, 2000);
+}, 1000);
            
-html2pdf(element)
+
 
         }
 </script>
