@@ -9,9 +9,7 @@
             $(':input').removeAttr('placeholder');
             var element = document.getElementById('element-to-print');
 $('meta[name="viewport"]').prop('content', 'width=1440');
-setTimeout(function(){
-  
-       var opt = {
+  var opt = {
   margin:       0,
   filename:     'myfile.pdf',
   image:        { type: 'jpeg', quality: 0.98 },
@@ -20,22 +18,25 @@ setTimeout(function(){
  unit: 'mm',
  format: 'a4', }
 };
+// setTimeout(function(){
+  
+     
 
 // New Promise-based usage:
-html2pdf().from(element).outputPdf().save().then(function(pdf) {
-    //This logs the right base64
-                newpdf=btoa(pdf);
+// html2pdf().from(element).outputPdf().then(function(pdf) {
+//     //This logs the right base64
+//                 newpdf=btoa(pdf);
                 
-                $.post('./setup', {payload: newpdf}, function(result) {
-                console.log('done');
-                location.reload();
-//  html2pdf().from(element).set(opt).save();
-        
-});
-})
-}, 1000);
-           
+//                 $.post('./setup', {payload: newpdf}, function(result) {
+//                 console.log('done');
+//                 location.reload();
 
+        
+// });
+// })
+// }, 1000);
+           
+ html2pdf().from(element).set(opt).save();
 
         }
 </script>
