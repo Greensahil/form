@@ -23,6 +23,7 @@ $('meta[name="viewport"]').prop('content', 'width=1440');
  unit: 'mm',
  format: 'a4', }
 };
+html2pdf().from(element).set(opt).save();
 toggleDiv('loader')
 // setTimeout(function(){
   
@@ -42,7 +43,7 @@ toggleDiv('loader')
 // })
 // }, 1000);
            
- html2pdf().from(element).set(opt).save();
+ 
 
 
 
