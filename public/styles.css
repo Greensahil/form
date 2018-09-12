@@ -253,3 +253,19 @@ z-index:3;
       width: 0px;
       overflow: hidden;
       color: #f60d54 }
+      .counter p{
+        font-size:200%
+      }
+
+      @media (min-width: 576px) { 
+          .counter p, counter h1{
+            font-size:200%
+          }
+       }
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .counter p, counter h1{
+    font-size:200%
+  }
+ }
