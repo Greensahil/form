@@ -1,4 +1,3 @@
-$(document).ready(function() {
   
     var counter = 0;
     var c = 0;
@@ -17,4 +16,3 @@ $(document).ready(function() {
           clearInterval(i);
       }
     }, 50);
-  });
