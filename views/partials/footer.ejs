@@ -10,6 +10,8 @@
     div.style.display = div.style.display == "none" ? "flex" : "none";
 }
         function myFunction(){
+            toggleDiv('loader')
+            pageloader()
             $(':input').removeAttr('placeholder');
             var element = document.getElementById('element-to-print');
 $('meta[name="viewport"]').prop('content', 'width=1440');
@@ -23,8 +25,7 @@ $('meta[name="viewport"]').prop('content', 'width=1440');
  format: 'a4', }
 };
 html2pdf().from(element).set(opt).save();
-toggleDiv('loader')
-pageloader()
+$('meta[name="viewport"]').prop('content', 'width=device-width, initial-scale=1, shrink-to-fit=no');
 // setTimeout(function(){
   
      
