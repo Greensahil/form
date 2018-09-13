@@ -16,7 +16,8 @@
  }
 
  function myFunction() {
-     toggleDiv('loader')
+    //  toggleDiv('loader')
+     $('meta[name="viewport"]').prop('content', 'width=1400');
      $(':input').removeAttr('placeholder');
      var element = document.getElementById('element-to-print');
 
