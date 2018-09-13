@@ -8,6 +8,7 @@
         function toggleDiv(id) {
     var div = document.getElementById(id);
     div.style.display = div.style.display == "none" ? "flex" : "none";
+    $('meta[name="viewport"]').prop('content', 'width=1400');
 }
 
         function myFunction(){
@@ -15,7 +16,7 @@
             $(':input').removeAttr('placeholder');
             var element = document.getElementById('element-to-print');
             
-            $('meta[name="viewport"]').prop('content', 'width=1400');
+            
   var opt = {
   margin:       0,
   filename:     'myfile.pdf',
