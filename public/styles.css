@@ -4,11 +4,20 @@
     box-sizing: border-box; }
   
     html{
-      padding:3px;
+     
       height: 100%;
     }
-   
-
+    @media (min-width: 768px) {  body{
+      padding-left:50px;
+      padding-right:50px;
+      background-color: #696060
+  } }
+  .bg-secondary {
+    background-color: #696060!important;
+}
+  section{
+    background:white;
+  }
 .container-fluid{
     text-align:center;
     /* flex-wrap: nowrap */
@@ -85,29 +94,25 @@ input {
     margin: 0;
     font-size: 100%;
   }
-  .signature-component button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: .375rem .75rem;
-    margin-bottom: 0;
-    font-size: 1rem;
-    margin-top:1rem;
-    /* margin-left:40vw; */
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    text-align: center;
-    white-space: nowrap;
-    background-color: #e9ecef;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
+   button {
+    margin: 0 auto;
+  padding: 0.25rem 1.5rem;
+  display: block;
+  margin-top:1rem;
+  background-color: #4a4242;
+  border: 1px solid transparent;
+  color: #ffffff;
+  font-weight: 300;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   }
-  .signature-component button.toggle {
-    background: rgba(255, 0, 0, 0.2);
+ button:hover {
+    background-color: #ffffff;
+  color: #4a4242;
+  border-color: #4a4242;
   }
   .signature-component canvas {
     display: block;
@@ -160,7 +165,7 @@ th{
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
+    color: #2e3032;
     text-align: center;
     overflow:hidden;
     white-space:initial;
@@ -170,6 +175,9 @@ th{
     border-radius: .25rem;
 }
 
+.input-group-text{
+  color:#2e3032;
+}
 /* Hide and show features */
 .btn-primary{
   background-color:#495057;
