@@ -4,16 +4,18 @@
     <script src="/dateprefixer.js"></script>
     <script src="/loadingpage.js"></script>
    <script>
-        
+        //Toggle div function hides or displays the loading screen
         function toggleDiv(id) {
     var div = document.getElementById(id);
     div.style.display = div.style.display == "none" ? "flex" : "none";
 }
 
         function myFunction(){
+            toggleDiv('loader')
             $(':input').removeAttr('placeholder');
             var element = document.getElementById('element-to-print');
-$('meta[name="viewport"]').prop('content', 'width=1400');
+            
+            $('meta[name="viewport"]').prop('content', 'width=1400');
   var opt = {
   margin:       0,
   filename:     'myfile.pdf',
@@ -24,7 +26,7 @@ $('meta[name="viewport"]').prop('content', 'width=1400');
  format: 'a4', }
 };
 html2pdf().from(element).set(opt).save();
-toggleDiv('loader')
+
 pageloader()
 
 // setTimeout(function(){
