@@ -21,7 +21,11 @@ $('meta[name="viewport"]').prop('content', 'width=1440');
  unit: 'mm',
  format: 'a4', }
 };
-html2pdf().from(element).set(opt).save();
+
+
+setTimeout(function(){
+        html2pdf().from(element).set(opt).save();
+},2000)
 // toggleDiv('loader')
 // pageloader()
 // setTimeout(function(){
