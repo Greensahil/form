@@ -11,7 +11,7 @@
         function myFunction(){
             $(':input').removeAttr('placeholder');
             var element = document.getElementById('element-to-print');
-$('meta[name="viewport"]').prop('content', 'width=1440');
+         $('meta[name="viewport"]').prop('content', 'width=1440');
   var opt = {
   margin:       0,
   filename:     'myfile.pdf',
@@ -26,8 +26,8 @@ $('meta[name="viewport"]').prop('content', 'width=1440');
 setTimeout(function(){
         html2pdf().from(element).set(opt).save();
 },2000)
-// toggleDiv('loader')
-// pageloader()
+toggleDiv('loader')
+pageloader()
 // setTimeout(function(){
   
      
