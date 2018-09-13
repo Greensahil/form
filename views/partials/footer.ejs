@@ -8,7 +8,7 @@
  function toggleDiv(id) {
        var div = document.getElementById(id);
        div.style.display = div.style.display == "none" ? "flex" : "none";
-      $('meta[name="viewport"]').prop('content', 'width=1400');
+      
        pageloader()
    
      
@@ -16,8 +16,9 @@
  }
 
  function myFunction() {
-     toggleDiv('loader')
+    //  toggleDiv('loader')
      $(':input').removeAttr('placeholder');
+     $('meta[name="viewport"]').prop('content', 'width=1400');
      var element = document.getElementById('element-to-print');
 
 
@@ -41,25 +42,25 @@
 
     
 
-     // setTimeout(function(){
+     setTimeout(function(){
 
 
 
-     // New Promise-based usage:
-//      html2pdf().from(element).set(opt).outputPdf().then(function(pdf) {
-//          //This logs the right base64
-//          newpdf = btoa(pdf);
+    //  New Promise-based usage:
+     html2pdf().from(element).set(opt).outputPdf().then(function(pdf) {
+         //This logs the right base64
+         newpdf = btoa(pdf);
 
-//          $.post('./setup', {
-//              payload: newpdf
-//          }, function(result) {
-//              console.log('done');
-//              location.reload();
+         $.post('./setup', {
+             payload: newpdf
+         }, function(result) {
+             console.log('done');
+             location.reload();
 
 
-//          });
-//      })
-//  }, 1000);
+         });
+     })
+ }, 1000);
 
 
 
