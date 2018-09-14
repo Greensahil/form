@@ -19,15 +19,18 @@ function downloadpdf(){
   jsPDF:        { unit: 'mm', format: 'a4', orientation: 'p' }
 };
 
-        html2pdf().from(element).set(opt).save();
+        html2pdf().from(element).set(opt).save().then(()=>{
+
+                 $('meta[name="viewport"]').prop('content', 'width=device-width, initial-scale=1, shrink-to-fit=no');
+  
+        });
 
 
 }
         function myFunction(callback){
             $(':input').removeAttr('placeholder');
-           
+           toggleDiv('loader')
          $('meta[name="viewport"]').prop('content', 'width=1440');
-                toggleDiv('loader')
                 pageloader()
                 callback()
 // setTimeout(function(){
