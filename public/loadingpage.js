@@ -17,7 +17,7 @@ function pageloader(){
         $('meta[name="viewport"]').prop('content', 'width=device-width, initial-scale=1, shrink-to-fit=no');
         toggleDiv('loader')
     }
-  }, 50);
+  }, 25);
 
   
 }
