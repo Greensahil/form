@@ -15,11 +15,9 @@
   var opt = {
   margin:       0,
   filename:     'myfile.pdf',
-  image:        { type: 'jpeg', quality: 1 },
+  image:        { type: 'jpeg', quality: 0.98 },
   html2canvas:  { scale:1},
-  jsPDF:        { orientation: 'l',
- unit: 'pt',
- format: 'a4', }
+  jsPDF:        { unit: 'mm', format: [ width, height], orientation: 'portrait' }
 };
 
 
