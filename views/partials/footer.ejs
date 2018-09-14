@@ -4,46 +4,20 @@
     <script src="dateprefixer.js"></script>
     <script src="loadingpage.js"></script>
    <script>
-      function toggleDiv(id) {
-    var div = document.getElementById(id);
-    div.style.display = div.style.display == "none" ? "flex" : "none";
-}
-        function myFunction(){
+     function myFunction(){
             $(':input').removeAttr('placeholder');
             var element = document.getElementById('element-to-print');
-         $('meta[name="viewport"]').prop('content', 'width=900');
+$('meta[name="viewport"]').prop('content', 'width=1440');
   var opt = {
   margin:       0,
   filename:     'myfile.pdf',
   image:        { type: 'jpeg', quality: 0.98 },
-  html2canvas:  { scale:1, dpi: 300, letterRendering: true},
-  jsPDF:        { unit: 'mm', format: 'a4', orientation: 'letter' }
+  html2canvas:  { scale:1},
+  jsPDF:        { orientation: 'p',
+ unit: 'mm',
+ format: 'a4', }
 };
-
-
-setTimeout(function(){
-        html2pdf().from(element).set(opt).save();
-},2000)
-toggleDiv('loader')
-pageloader()
-// setTimeout(function(){
-  
-     
-// New Promise-based usage:
-// html2pdf().from(element).outputPdf().then(function(pdf) {
-//     //This logs the right base64
-//                 newpdf=btoa(pdf);
-                
-//                 $.post('./setup', {payload: newpdf}, function(result) {
-//                 console.log('done');
-//                 location.reload();
-        
-// });
-// })
-// }, 1000);
-           
- 
-        }
+html2pdf().from(element).set(opt).save();}
 </script>
 
 </body>
