@@ -8,11 +8,10 @@
     var div = document.getElementById(id);
     div.style.display = div.style.display == "none" ? "flex" : "none";
 }
-        function myFunction(){
-            $(':input').removeAttr('placeholder');
-            var element = document.getElementById('element-to-print');
-         $('meta[name="viewport"]').prop('content', 'width=1440');
-  var opt = {
+
+function downloadpdf(){
+         var element = document.getElementById('element-to-print');
+        var opt = {
   margin:       0,
   filename:     'myfile.pdf',
   image:        { type: 'jpeg', quality: 0.98 },
@@ -20,12 +19,17 @@
   jsPDF:        { unit: 'mm', format: 'a4', orientation: 'p' }
 };
 
-
-
         html2pdf().from(element).set(opt).save();
 
-toggleDiv('loader')
-pageloader()
+
+}
+        function myFunction(callback){
+            $(':input').removeAttr('placeholder');
+           
+         $('meta[name="viewport"]').prop('content', 'width=1440');
+                toggleDiv('loader')
+                pageloader()
+                callback()
 // setTimeout(function(){
   
      
