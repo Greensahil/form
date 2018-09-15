@@ -27,9 +27,9 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text required">Name</span>
                 </div>
-                <input type="text" placeholder="First" class="form-control isrequired" style="z-index:1">
-                <input type="text" placeholder="Middle" class="form-control">
-                <input type="text" placeholder="Last" class="form-control isrequired">
+                <input type="text" placeholder="First" class="form-control isrequired expand" style="z-index:1">
+                <input type="text" placeholder="Middle" class="form-control expand">
+                <input type="text" placeholder="Last" class="form-control isrequired expand">
             </div>
         </div>
         <div class="col-md-6 col-sm-12">
@@ -49,24 +49,26 @@
                 <input type="tel" placeholder="123-456-7890" class="form-control isrequired">
             </div>
         </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text required" id="basic-addon1">Street</span>
+                </div>
+                                <input type="text" placeholder="Street" class="form-control isrequired">
+            </div>
+        </div>
         <div class="col-sm-12 col-md-6 mb-3">
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text required" id="">Current Address</span>
                 </div>
-                <input type="text" placeholder="Street" class="form-control isrequired">
-                <input type="text" placeholder="City" class="form-control isrequired">
-                <input type="text" placeholder="State" class="form-control isrequired">
+                <input type="number" placeholder="zip code" class="form-control isrequired expand" aria-label="Username" aria-describedby="basic-addon1">
+
+                <input type="text" placeholder="City" class="form-control isrequired expand">
+                <input type="text" placeholder="State" class="form-control isrequired expand">
             </div>
         </div>
-        <div class="col-sm-12 col-md-6">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text required" id="basic-addon1">Zip code</span>
-                </div>
-                <input type="number" placeholder="zip code" class="form-control isrequired" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-        </div>
+        
         <div class="col-12">
             <div class="alert alert-info font-weight-bold mb-2" role="alert">
                 *If at the above residence less than three years, list below all residences for the past three years. Attach a sperate sheet if necessary.
@@ -77,9 +79,9 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="">Previous Address</span>
                 </div>
-                <input type="text" placeholder="Street" class="form-control">
-                <input type="text" placeholder="City" class="form-control">
-                <input type="text" placeholder="State" class="form-control">
+                <input type="text" placeholder="Street" class="form-control expand">
+                <input type="text" placeholder="City" class="form-control expand">
+                <input type="text" placeholder="State" class="form-control expand">
             </div>
         </div>
         <div class="col-sm-12 col-md-6 mt-3">

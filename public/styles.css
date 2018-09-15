@@ -82,6 +82,7 @@ input {
   }
 
 
+
   .signature-component {
     text-align: left;
     display: inline-block;
@@ -203,12 +204,12 @@ th{
     border-radius: .25rem;
 }
 
-[data-toggle="collapse"].collapsed .if-not-collapsed {
+[data-toggle="collapse"].collapsed .if-not-collapsed, 
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed
+{
   display: none;
 }
-[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
-  display: none;
-}
+
 
 .collapse.show{
   display:flex;
@@ -267,10 +268,10 @@ z-index:3;
       .counter p, .counter h1{
         font-size:6vw;}
 
-      /* @media (max-width: 576px) { 
-        .counter p, .counter h1{
-          font-size:2em;
-        }
+      /* @media (max-width: 580px) { 
+         .input-group-prepend{
+    width:100%
+  }
       } */
 
  /* Medium devices (tablets, 768px and up) */
@@ -295,5 +296,10 @@ td{
   font-weight: bold;
   font-size:1.3rem;
   position: absolute;
-  margin-left: -10px;
+  margin-left: -11px;
 }
+
+/* .form-control{
+  min-width:100%;
+  max-width:100%
+} */
