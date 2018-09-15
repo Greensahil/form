@@ -28,6 +28,25 @@ function downloadpdf(){
 
 }
         function myFunction(callback){
+
+               var reqlength = $('.isrequired').length;
+    console.log(reqlength);
+    var value = $('.isrequired').filter(function () {
+        console.log(this.value)
+        return this.value != '';
+    });
+
+    if (value.length>=0 && (value.length !== reqlength)) {
+        var danger = document.querySelector('.alert-danger');
+        danger.style.display = danger.style.display == "none" ? "flex" : "none";
+        return
+    } else {
+        var danger = document.querySelector('.alert-danger');
+        var success = document.querySelector('.alert-success');
+        success.style.display = success.style.display == "none" ? "flex" : "none";
+        danger.style.display = danger.style.display == "none" ? "flex" : "none";
+    }
+
             $(':input').removeAttr('placeholder');
            toggleDiv('loader')
          $('meta[name="viewport"]').prop('content', 'width=1440');

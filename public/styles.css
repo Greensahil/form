@@ -13,7 +13,7 @@
       background-color: #696060
   } }
   .bg-secondary {
-    background-color: #696060!important;
+    background-color: #bea9a9!important;
 }
   section{
     background:white;
@@ -210,7 +210,9 @@ th{
   display: none;
 }
 
-
+.collapse.show{
+  display:flex;
+}
 
 
 /* Loading screen animation */
@@ -283,3 +285,14 @@ td{
  td div{
    padding:5px;
  }
+
+
+ /* Adding required fields */
+
+ .required:before{
+  color: red;
+  content: "*";
+  font-size:1.3rem;
+  position: absolute;
+  margin-left: -10px;
+}
