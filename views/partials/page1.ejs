@@ -77,7 +77,7 @@
         <div class="col-sm-12 col-md-6 mb-3 mt-3">
             <div class="input-group">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="">Previous Address</span>
+                    <span class="input-group-text d-flex">Previous Address</span>
                 </div>
                 <input type="text" placeholder="Street" class="form-control expand">
                 <input type="text" placeholder="City" class="form-control expand">
@@ -97,9 +97,9 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="">Previous Address</span>
                 </div>
-                <input type="text" placeholder="Street" class="form-control">
-                <input type="text" placeholder="City" class="form-control">
-                <input type="text" placeholder="State" class="form-control">
+                <input type="text" placeholder="Street" class="form-control expand">
+                <input type="text" placeholder="City" class="form-control expand">
+                <input type="text" placeholder="State" class="form-control expand">
             </div>
         </div>
         <div class="col-sm-12 col-md-6">
@@ -133,10 +133,11 @@
         </div>
         <div class="col-md-3 col-sm-12">
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Who reffered you?</span>
+                <div class="mystyles expand">
+                    <span>Who reffered you?</span>
+                    </div>
                     <input type="text" placeholder="First and Last name" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
+        
             </div>
         </div>
         <div class="col-md-3 col-sm-12">
@@ -163,8 +164,8 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Dates</span>
                 </div>
-                <input type="text" class="form-control" placeholder="From" aria-label="Username" aria-describedby="basic-addon1">
-                <input type="text" class="form-control" placeholder="To" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="date" class="form-control" placeholder="From" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="date" class="form-control" placeholder="To" aria-label="Username" aria-describedby="basic-addon1">
             </div>
         </div>
         <div class="col-md-5 col-sm-12">
@@ -204,8 +205,8 @@
         
         <div class="col-12 mb-3">
             <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Names of relatives employed by this company</span>
+                <div class="mystyles">
+                    <span>Names of relatives employed by this company</span>
                 </div>
                 <textarea class="form-control" placeholder="Seperated by comma" aria-label="With textarea"></textarea>
             </div>
@@ -213,10 +214,10 @@
         <div class="html2pdf__page-break"></div>
         <div class="col-md-5 col-sm-12 mt-3">
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Are you currently employed</span>
+                <div class="mystyles">
+                    <span>Are you currently employed</span>
                 </div>
-                <div class="checkBoxes">
+                <div class="checkBoxes" style="width:100%">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                         <label class="form-check-label" for="inlineRadio1">Yes</label>
@@ -230,13 +231,12 @@
         </div>
         <div class="col-md-1 mt-3"></div>
         <div class="col-md-6 col-sm-12 mt-3">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">If not, how long since leaving last emplyment</span>
-                </div>
-                <input type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-        </div>
+               <div class="mystyles">
+         <span> If not, how long since leaving last employment</span>
+      </div>
+      <div>
+         <input class="form-control" type="text">
+      </div>
     </div>
     <hr>
 </div>
