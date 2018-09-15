@@ -292,6 +292,7 @@ td{
  .required:before{
   color: red;
   content: "*";
+  font-weight: bold;
   font-size:1.3rem;
   position: absolute;
   margin-left: -10px;

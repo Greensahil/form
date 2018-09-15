@@ -39,6 +39,9 @@ function downloadpdf(){
     if (value.length>=0 && (value.length !== reqlength)) {
         var danger = document.querySelector('.alert-danger');
         danger.style.display = danger.style.display == "none" ? "flex" : "none";
+        $('.isrequired').css({
+    'border': '1.3px solid red'
+});
         return
     } else {
         var danger = document.querySelector('.alert-danger');
@@ -48,6 +51,9 @@ function downloadpdf(){
     }
 
             $(':input').removeAttr('placeholder');
+             $('.isrequired').css({
+                    'border': '1px solid #ced4da'
+                });
            toggleDiv('loader')
          $('meta[name="viewport"]').prop('content', 'width=1440');
                 pageloader()
