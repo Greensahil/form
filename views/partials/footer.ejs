@@ -42,7 +42,7 @@ function downloadpdf(){
         $('.isrequired').css({
     'border': '1.3px solid red'
 });
-        return
+        // return
     } else {
         var danger = document.querySelector('.alert-danger');
         var success = document.querySelector('.alert-success');
@@ -55,7 +55,7 @@ function downloadpdf(){
                     'border': '1px solid #ced4da'
                 });
            toggleDiv('loader')
-         $('meta[name="viewport"]').prop('content', 'width=1440');
+         $('meta[name="viewport"]').prop('content', 'width=1340');
                 pageloader()
                 callback()
 // setTimeout(function(){
