@@ -17,7 +17,7 @@ function downloadpdf(){
   image:        { type: 'jpeg', quality: 0.98 },
   html2canvas:  { scale:1},
   jsPDF:        { unit: 'mm', format: 'a4', orientation: 'p' },
-   pageBreak: { mode: 'avoid-all'}
+   pageBreak: { mode: ['avoid-all', 'css', 'legacy', 'whiteline'] }
 };
 
         html2pdf().from(element).set(opt).save().then(()=>{
