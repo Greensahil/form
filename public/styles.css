@@ -307,3 +307,7 @@ td{
 .increasecheckbox {
   transform: scale(1.5);
 }
+
+textarea{
+  height:40px;
+}

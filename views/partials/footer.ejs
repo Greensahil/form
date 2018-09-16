@@ -16,7 +16,8 @@ function downloadpdf(){
   filename:     'myfile.pdf',
   image:        { type: 'jpeg', quality: 0.98 },
   html2canvas:  { scale:1},
-  jsPDF:        { unit: 'mm', format: 'a4', orientation: 'p' }
+  jsPDF:        { unit: 'mm', format: 'a4', orientation: 'p' },
+   pageBreak: { mode: 'avoid-all'}
 };
 
         html2pdf().from(element).set(opt).save().then(()=>{
@@ -88,6 +89,13 @@ $('textarea').each(function () {
   this.style.height = (this.scrollHeight) + 'px';
 });
 
+$('.myexpand').each(function () {
+  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+}).on('input', function () {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+});
+
 
  $('.expand').each(function () {
   this.setAttribute('style', 'width:' + (this.scrollWidth) + 'px');
@@ -98,5 +106,12 @@ $('textarea').each(function () {
 
 
 </script>
+
+ <script>
+    window.onbeforeunload = function(e) {
+       return 'Dialog text here.';
+    };
+</script>
+
 </body>
 </html>
