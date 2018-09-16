@@ -303,3 +303,7 @@ td{
   min-width:100%;
   max-width:100%
 } */
+
+.increasecheckbox {
+  transform: scale(1.5);
+}
