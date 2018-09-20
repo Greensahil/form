@@ -9,40 +9,53 @@
     div.style.display = div.style.display == "none" ? "flex" : "none";
 }
 
-function downloadpdf(){
-         var element = document.getElementById('element-to-print');
-        var opt = {
-  margin:       0,
-  filename:     'myfile.pdf',
-  image:        { type: 'jpeg', quality: 0.98 },
-  html2canvas:  { scale:1},
-  jsPDF:        { unit: 'mm', format: 'a4', orientation: 'p' },
-   pageBreak: { mode: ['avoid-all', 'css', 'legacy', 'whiteline'] }
-};
+function downloadpdf() {
+    var element = document.getElementById('element-to-print');
+    var opt = {
+        margin: 0,
+        filename: 'myfile.pdf',
+        image: {
+            type: 'jpeg',
+            quality: 0.98
+        },
+        html2canvas: {
+            scale: 1
+        },
+        jsPDF: {
+            unit: 'mm',
+            format: 'a4',
+            orientation: 'p'
+        },
+        pageBreak: {
+            mode: ['avoid-all', 'css', 'legacy', 'whiteline']
+        }
+    };
 
-        html2pdf().from(element).set(opt).save().then(()=>{
+    html2pdf().from(element).set(opt).save().then(() => {
+        $("button").show()
 
-                 $('meta[name="viewport"]').prop('content', 'width=device-width, initial-scale=1, shrink-to-fit=no');
-  
-        });
+        $('meta[name="viewport"]').prop('content', 'width=device-width, initial-scale=1, shrink-to-fit=no');
+
+    });
 
 
 }
-        function myFunction(callback){
 
-               var reqlength = $('.isrequired').length;
+function myFunction(callback) {
+
+    var reqlength = $('.isrequired').length;
     console.log(reqlength);
-    var value = $('.isrequired').filter(function () {
+    var value = $('.isrequired').filter(function() {
         console.log(this.value)
         return this.value != '';
     });
 
-    if (value.length>=0 && (value.length !== reqlength)) {
+    if (value.length >= 0 && (value.length !== reqlength)) {
         var danger = document.querySelector('.alert-danger');
         danger.style.display = danger.style.display == "none" ? "flex" : "none";
         $('.isrequired').css({
-    'border': '1.3px solid red'
-});
+            'border': '1.3px solid red'
+        });
         // return
     } else {
         var danger = document.querySelector('.alert-danger');
@@ -51,70 +64,35 @@ function downloadpdf(){
         danger.style.display = danger.style.display == "none" ? "flex" : "none";
     }
 
-            $(':input').removeAttr('placeholder');
-             $('.isrequired').css({
-                    'border': '1px solid #ced4da'
-                });
-           toggleDiv('loader')
-         $('meta[name="viewport"]').prop('content', 'width=1340');
-                pageloader()
-                callback()
-// setTimeout(function(){
-  
-     
-// New Promise-based usage:
-// html2pdf().from(element).outputPdf().then(function(pdf) {
-//     //This logs the right base64
-//                 newpdf=btoa(pdf);
-                
-//                 $.post('./setup', {payload: newpdf}, function(result) {
-//                 console.log('done');
-//                 location.reload();
-        
-// });
-// })
-// }, 1000);
-           
- 
-        }
+    $(':input').removeAttr('placeholder');
+    $("button").hide()
+    $('.isrequired').css({
+        'border': '1px solid #ced4da'
+    });
+    toggleDiv('loader')
+    $('meta[name="viewport"]').prop('content', 'width=1340');
+    pageloader()
+    callback()
+        // setTimeout(function(){
+
+
+    // New Promise-based usage:
+    // html2pdf().from(element).outputPdf().then(function(pdf) {
+    //     //This logs the right base64
+    //                 newpdf=btoa(pdf);
+
+    //                 $.post('./setup', {payload: newpdf}, function(result) {
+    //                 console.log('done');
+    //                 location.reload();
+
+    // });
+    // })
+    // }, 1000);
+
+
+}
 </script>
 
 
-<script>
-    //Dynamic height for input fields
-$('textarea').each(function () {
-  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-}).on('input', function () {
-  this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + 'px';
-});
-
-$('.myexpand').each(function () {
-  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-}).on('input', function () {
-  this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + 'px';
-});
-
-
- $('.expand').each(function () {
-  this.setAttribute('style', 'width:' + (this.scrollWidth) + 'px');
-}).on('input', function () {
-  this.style.width = 'auto';
-  this.style.width = (this.scrollWidth) + 'px';
-});
-
-
-</script>
-
- <script>
-    window.onbeforeunload = function(e) {
-       return 'Dialog text here.';
-    };
-</script>
-<script>
-// $( "button:contains('Add Employment Record')" ).css( 'background-color','#005461' );
-// $( "button:contains('Remove Record')" ).css( 'background-color','#B20000' );
-</script>
 </body>
 </html>

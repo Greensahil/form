@@ -434,33 +434,9 @@ var SignaturePad = (function(document) {
 })(document);
 
 
-var signaturePad2 = new SignaturePad(document.getElementById('signature-pad-2'), {
-    backgroundColor: 'rgba(255, 255, 255, 0)',
-    penColor: 'rgb(0, 0, 0)',
-    velocityFilterWeight: .7,
-    minWidth: 0.5,
-    maxWidth: 2.5,
-    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-    minPointDistance: 3,
-});
-var signaturePad3 = new SignaturePad(document.getElementById('signature-pad-3'), {
-    backgroundColor: 'rgba(255, 255, 255, 0)',
-    penColor: 'rgb(0, 0, 0)',
-    velocityFilterWeight: .7,
-    minWidth: 0.5,
-    maxWidth: 2.5,
-    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-    minPointDistance: 3,
-});
-// var signaturePad4 = new SignaturePad(document.getElementById('signature-pad-4'), {
-//     backgroundColor: 'rgba(255, 255, 255, 0)',
-//     penColor: 'rgb(0, 0, 0)',
-//     velocityFilterWeight: .7,
-//     minWidth: 0.5,
-//     maxWidth: 2.5,
-//     throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-//     minPointDistance: 3,
-// });
+
+
+
 var signaturePad5 = new SignaturePad(document.getElementById('signature-pad-5'), {
     backgroundColor: 'rgba(255, 255, 255, 0)',
     penColor: 'rgb(0, 0, 0)',
@@ -470,51 +446,8 @@ var signaturePad5 = new SignaturePad(document.getElementById('signature-pad-5'),
     throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
     minPointDistance: 3,
 });
-// var signaturePad6 = new SignaturePad(document.getElementById('signature-pad-6'), {
-//     backgroundColor: 'rgba(255, 255, 255, 0)',
-//     penColor: 'rgb(0, 0, 0)',
-//     velocityFilterWeight: .7,
-//     minWidth: 0.5,
-//     maxWidth: 2.5,
-//     throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-//     minPointDistance: 3,
-// });
-var signaturePad7 = new SignaturePad(document.getElementById('signature-pad-7'), {
-    backgroundColor: 'rgba(255, 255, 255, 0)',
-    penColor: 'rgb(0, 0, 0)',
-    velocityFilterWeight: .7,
-    minWidth: 0.5,
-    maxWidth: 2.5,
-    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-    minPointDistance: 3,
-});
-var signaturePad8 = new SignaturePad(document.getElementById('signature-pad-8'), {
-    backgroundColor: 'rgba(255, 255, 255, 0)',
-    penColor: 'rgb(0, 0, 0)',
-    velocityFilterWeight: .7,
-    minWidth: 0.5,
-    maxWidth: 2.5,
-    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-    minPointDistance: 3,
-});
-var signaturePad9 = new SignaturePad(document.getElementById('signature-pad-9'), {
-    backgroundColor: 'rgba(255, 255, 255, 0)',
-    penColor: 'rgb(0, 0, 0)',
-    velocityFilterWeight: .7,
-    minWidth: 0.5,
-    maxWidth: 2.5,
-    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-    minPointDistance: 3,
-});
-var signaturePad10 = new SignaturePad(document.getElementById('signature-pad-10'), {
-    backgroundColor: 'rgba(255, 255, 255, 0)',
-    penColor: 'rgb(0, 0, 0)',
-    velocityFilterWeight: .7,
-    minWidth: 0.5,
-    maxWidth: 2.5,
-    throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-    minPointDistance: 3,
-});
+
+
 var signaturePad11 = new SignaturePad(document.getElementById('signature-pad-11'), {
     backgroundColor: 'rgba(255, 255, 255, 0)',
     penColor: 'rgb(0, 0, 0)',
@@ -524,74 +457,49 @@ var signaturePad11 = new SignaturePad(document.getElementById('signature-pad-11'
     throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
     minPointDistance: 3,
 });
-// var signaturePad12 = new SignaturePad(document.getElementById('signature-pad-12'), {
-//     backgroundColor: 'rgba(255, 255, 255, 0)',
-//     penColor: 'rgb(0, 0, 0)',
-//     velocityFilterWeight: .7,
-//     minWidth: 0.5,
-//     maxWidth: 2.5,
-//     throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-//     minPointDistance: 3,
-// });
-// var signaturePad13 = new SignaturePad(document.getElementById('signature-pad-13'), {
-//     backgroundColor: 'rgba(255, 255, 255, 0)',
-//     penColor: 'rgb(0, 0, 0)',
-//     velocityFilterWeight: .7,
-//     minWidth: 0.5,
-//     maxWidth: 2.5,
-//     throttle: 16, // max x milli seconds on event update, OBS! this introduces lag for event update
-//     minPointDistance: 3,
-// });
-var saveButton = document.getElementById('save'),
-    clearButton2 = document.getElementById('clear-2')
-    clearButton3 = document.getElementById('clear-3')
-    // clearButton4 = document.getElementById('clear-4')
-    clearButton5 = document.getElementById('clear-5')
-    // clearButton6 = document.getElementById('clear-6')
-    clearButton7 = document.getElementById('clear-7')
-    clearButton8 = document.getElementById('clear-8')
-    clearButton9 = document.getElementById('clear-9')
-    clearButton10 = document.getElementById('clear-10')
-    clearButton11 = document.getElementById('clear-11')
-    // clearButton12 = document.getElementById('clear-12')
-    // clearButton13 = document.getElementById('clear-13')
 
+var saveButton = document.getElementById('save'),
+    clearButton5 = document.getElementById('clear-5')
+    clearButton11 = document.getElementById('clear-11')
     showPointsToggle = document.getElementById('showPointsToggle');
 
 
-clearButton2.addEventListener('click', function(event) {
-    signaturePad2.clear();
-});
-clearButton3.addEventListener('click', function(event) {
-    signaturePad3.clear();
-});
-// clearButton4.addEventListener('click', function(event) {
-//     signaturePad4.clear();
-// });
+
 clearButton5.addEventListener('click', function(event) {
     signaturePad5.clear();
 });
-// clearButton6.addEventListener('click', function(event) {
-//     signaturePad6.clear();
-// });
-clearButton7.addEventListener('click', function(event) {
-    signaturePad7.clear();
-});
-clearButton8.addEventListener('click', function(event) {
-    signaturePad8.clear();
-});
-clearButton9.addEventListener('click', function(event) {
-    signaturePad9.clear();
-});
-clearButton10.addEventListener('click', function(event) {
-    signaturePad10.clear();
-});
+
 clearButton11.addEventListener('click', function(event) {
     signaturePad11.clear();
 });
-// clearButton12.addEventListener('click', function(event) {
-//     signaturePad12.clear();
-// });
-// clearButton13.addEventListener('click', function(event) {
-//     signaturePad13.clear();
-// });
+
+
+//Dynamic height for input fields
+$('textarea').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+  }).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
+  
+  $('.myexpand').each(function () {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+  }).on('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
+  
+  
+   $('.expand').each(function () {
+    this.setAttribute('style', 'width:' + (this.scrollWidth) + 'px');
+  }).on('input', function () {
+    this.style.width = 'auto';
+    this.style.width = (this.scrollWidth) + 'px';
+  });
+
+  
+  //prevent reload
+
+  window.onbeforeunload = function(e) {
+    return 'Dialog text here.';
+ };
