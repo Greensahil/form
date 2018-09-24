@@ -8,9 +8,7 @@
     var div = document.getElementById(id);
     div.style.display = div.style.display == "none" ? "flex" : "none";
 }
-
-function downloadpdf() {
-    var element = document.getElementById('element-to-print');
+   var element = document.getElementById('element-to-print');
     var opt = {
         margin: 0,
         filename: 'myfile.pdf',
@@ -29,7 +27,9 @@ function downloadpdf() {
         pageBreak: {
             mode: ['avoid-all', 'css', 'legacy', 'whiteline']
         }
-    };
+    }
+function downloadpdf() {
+ 
 
     html2pdf().from(element).set(opt).save().then(() => {
         $("button").show()
@@ -54,9 +54,9 @@ function myFunction(callback) {
         var danger = document.querySelector('.alert-danger');
         danger.style.display = danger.style.display == "none" ? "flex" : "none";
         $('.isrequired').css({
-            'border': '1.3px solid red'
+            'border': '1px solid red'
         });
-        // return
+        return
     } else {
         var danger = document.querySelector('.alert-danger');
         var success = document.querySelector('.alert-success');
@@ -73,21 +73,21 @@ function myFunction(callback) {
     $('meta[name="viewport"]').prop('content', 'width=1340');
     pageloader()
     callback()
-        // setTimeout(function(){
+        setTimeout(function(){
 
 
     // New Promise-based usage:
-    // html2pdf().from(element).outputPdf().then(function(pdf) {
-    //     //This logs the right base64
-    //                 newpdf=btoa(pdf);
+    html2pdf().from(element).outputPdf().then(function(pdf) {
+        //This logs the right base64
+                    newpdf=btoa(pdf);
 
-    //                 $.post('./setup', {payload: newpdf}, function(result) {
-    //                 console.log('done');
-    //                 location.reload();
+                    $.post('./setup', {payload: newpdf}, function(result) {
+                    console.log('done');
+                    // location.reload();
 
-    // });
-    // })
-    // }, 1000);
+    });
+    })
+    }, 1000);
 
 
 }
