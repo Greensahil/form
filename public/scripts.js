@@ -7,12 +7,30 @@
  * Copyright 2016 Szymon Nowak
  * Released under the MIT license
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var SignaturePad = (function(document) {
     "use strict";
 
     var log = console.log.bind(console);
 
     var SignaturePad = function(canvas, options) {
+
+
+
+        
         var self = this,
             opts = options || {};
 
@@ -37,8 +55,29 @@ var SignaturePad = (function(document) {
         canvas.width = canvas.scrollWidth;
         canvas.height = canvas.scrollHeight;
         window.addEventListener('resize', function() {
+             
+            SignaturePad.prototype.toDataURL = function(imageType, quality) {
+                var canvas = this._canvas;
+                return canvas.toDataURL.apply(canvas, arguments);
+            };
+        
+            SignaturePad.prototype.fromDataURL = function(dataUrl) {
+        
           canvas.width = canvas.scrollWidth;
           canvas.height = canvas.scrollHeight;
+          var self = this,
+          image = new Image()
+          ratio = window.devicePixelRatio || 1
+
+      this._reset();
+      image.src = dataUrl;
+      image.onload = function() {
+          self._ctx.drawImage(image, 0, 0, width, height);
+
+      };
+      this._isEmpty = false;
+  };
+
         });
         this._ctx = canvas.getContext("2d");
         this._ctx.lineCap = 'round';
@@ -121,25 +160,7 @@ var SignaturePad = (function(document) {
         this.arePointsDisplayed = !this.arePointsDisplayed;
     };
 
-    SignaturePad.prototype.toDataURL = function(imageType, quality) {
-        var canvas = this._canvas;
-        return canvas.toDataURL.apply(canvas, arguments);
-    };
 
-    SignaturePad.prototype.fromDataURL = function(dataUrl) {
-        var self = this,
-            image = new Image(),
-            ratio = window.devicePixelRatio || 1,
-            width = this._canvas.width / ratio,
-            height = this._canvas.height / ratio;
-
-        this._reset();
-        image.src = dataUrl;
-        image.onload = function() {
-            self._ctx.drawImage(image, 0, 0, width, height);
-        };
-        this._isEmpty = false;
-    };
 
     SignaturePad.prototype._strokeUpdate = function(event) {
         var point = this._createPoint(event);
@@ -499,3 +520,7 @@ $('textarea').each(function () {
 
   
   //prevent reload
+
+  window.onbeforeunload = function(e) {
+    return 'Dialog text here.';
+ };
