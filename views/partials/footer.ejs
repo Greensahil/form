@@ -52,7 +52,7 @@ function myFunction(callback) {
 
     if (value.length >= 0 && (value.length !== reqlength)) {
         var danger = document.querySelector('.alert-danger');
-        danger.style.display = danger.style.display == "none" ? "flex" : "none";
+        danger.style.display="flex"
         $('.isrequired').css({
             'border': '1px solid red'
         });
@@ -60,8 +60,8 @@ function myFunction(callback) {
     } else {
         var danger = document.querySelector('.alert-danger');
         var success = document.querySelector('.alert-success');
-        success.style.display = success.style.display == "none" ? "flex" : "none";
-        danger.style.display = danger.style.display == "none" ? "flex" : "none";
+         success.style.display = "flex"
+        danger.style.display = "none" 
     }
 
     $(':input').removeAttr('placeholder');
@@ -77,25 +77,20 @@ function myFunction(callback) {
 
 
     // New Promise-based usage:
-    html2pdf().from(element).outputPdf().then(function(pdf) {
-        //This logs the right base64
-                    newpdf=btoa(pdf);
+    // html2pdf().from(element).outputPdf().then(function(pdf) {
+    //     //This logs the right base64
+    //                 newpdf=btoa(pdf);
 
-                    $.post('./setup', {payload: newpdf}, function(result) {
-                    console.log('done');
-                    // location.reload();
+    //                 $.post('./setup', {payload: newpdf}, function(result) {
+    //                 console.log('done');
+    //                 // location.reload();
 
-    });
-    })
+    // });
+    // })
     }, 1000);
 
 
 }
-
-
-
-
-
 </script>
 
 
