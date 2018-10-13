@@ -24,7 +24,9 @@
     /* line-height:0.2; */
 }
 
-
+/* div{
+        page-break-inside: avoid;
+    } */
 
 /* Grid visualization */
 
@@ -417,5 +419,8 @@ textarea{
 }
 
 
-
-
+/* .input{
+  page-break-after: auto;
+  page-break-inside: avoid !important;
+  page-break-before: auto;
+  } */
