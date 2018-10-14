@@ -19,10 +19,6 @@
     <div class="col-10">Complete all the informtaion requested. You may be asked to provide addtional information on another form. This application will be kept on file.</div>
     <div class="col-1"></div>
     <hr>
-
-</div>
-
-    <div class="row mb-3 ">
         <div class="col-sm-12 col-md-6 mb-3">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -38,10 +34,29 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text required" id="basic-addon1">Date</span>
                 </div>
+                <input type="date" id="today" class="form-control isrequired" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+                <div class="col-md-5">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text required" id="basic-addon1">Date of Birth</span>
+                </div>
                 <input type="date" class="form-control isrequired" aria-label="Username" aria-describedby="basic-addon1">
             </div>
         </div>
-    
+        <div class="col-md-7">
+            <h6>The U.S. Department of Transportaion requires that driver applicants state their date of birth</h6>
+            <p>sec 391.21(p)(2)</p>
+        </div>
+        <div class="col-12">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text required" id="basic-addon1">Social Security No.</span>
+                </div>
+                <input type="text" class="form-control isrequired" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
         <div class="col-sm-12 col-md-6">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -75,11 +90,6 @@
                 *If at the above residence less than three years, list below all residences for the past three years.
             </div>
         </div>
-        </div>
-        <button class="newBtn collapsed" data-toggle="collapse" href="#addAddress1">
-        <span class="if-collapsed">Add previous Address</span>
-    </button>
-        <div class="row collapse" id="addAddress1">
         <div class="col-sm-12 col-md-6 mb-3 mt-3">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -99,10 +109,6 @@
             </div>
             
         </div>
-        <button class="removeBtn collapsed mb-3" data-toggle="collapse" href="#addAddress1">Remove addess</button>
-        <button class="newBtn collapsed" data-toggle="collapse" href="#addAddress2">Add previous Address</button>
-        </div>
-        <div class="row collapse" id="addAddress2">
         <div class="col-sm-12 col-md-6 mb-3">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -122,8 +128,6 @@
                 <input type="number" placeholder="zip code" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
             </div>
         </div>
-         <button class="removeBtn collapsed mb-3" data-toggle="collapse" href="#addAddress2">Remove Address</button></div>
-         <div class="row">
         <div class="col-12">
             <div class="alert alert-info font-weight-bold mb-2" role="alert" style="text-align:center">
                Application Information
@@ -456,26 +460,6 @@
     <h4 class="d-flex justify-content-center mt-3"><u>DRIVER EXPERIENCE AND QUALIFICATION</u></h4>
     <h6 class="d-flex justify-content-center">Answer this question in this section only if applying for a driver position.</h6>
     <div class="row">
-        <div class="col-md-5">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Date of Birth</span>
-                </div>
-                <input type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-        </div>
-        <div class="col-md-7">
-            <h6>The U.S. Department of Transportaion requires that driver applicants state their date of birth</h6>
-            <p>sec 391.21(p)(2)</p>
-        </div>
-        <div class="col-12">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Social Security No.</span>
-                </div>
-                <input type="number" class="form-control isrequired" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-        </div>
     </div>
     <h4 class="d-flex justify-content-center"><u>PHYSICAL HISTORY</u></h4>
     <h6 style="text-align:left">The U.S. Department of Transportation requires that all driver applicants pass certain physical tests before they are hired to drive a motor carrier. FMCSR 391 Subpart E.</h6>

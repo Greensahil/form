@@ -43,10 +43,10 @@ div[class^="col-"] {
     line-height:0.2;
 }
 
-.instructions{
+/* .instructions{
     margin:0 auto;
     line-height:1.6
-}
+} */
 input {
     border: 0;
     outline: 0;
@@ -425,6 +425,12 @@ textarea{
   page-break-before: auto;
   } */
   
-  .container-fluid {
+  /* .container-fluid {
     page-break-inside:avoid
-  }
+  } */
+
+  /* .row, tr {
+    page-break-after: avoid;
+    page-break-inside: avoid !important;
+    page-break-before: avoid;
+    } */
