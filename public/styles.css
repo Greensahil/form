@@ -425,6 +425,6 @@ textarea{
   page-break-before: auto;
   } */
   
-  .container-fluid, .row {
-    break-before: avoid;
+  .container-fluid {
+    page-break-inside:avoid
   }
