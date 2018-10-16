@@ -54,7 +54,7 @@ function myFunction(callback) {
         $('.isrequired').css({
             'border': '1px solid red'
         });
-        // return
+        return
     } else {
         var danger = document.querySelector('.alert-danger');
         var success = document.querySelector('.alert-success');
@@ -70,7 +70,7 @@ function myFunction(callback) {
     toggleDiv('loader')
     $('meta[name="viewport"]').prop('content', 'width=1340');
     pageloader()
-    callback()
+    
 
 
     // New Promise-based usage:
@@ -84,6 +84,7 @@ function myFunction(callback) {
 
     });
     })
+    callback()
 
 
 }
