@@ -16,7 +16,7 @@ function pageloader(){
         clearInterval(i);
         toggleDiv('loader')
     }
-  }, 25);
+  }, 50);
  
   
 }
